@@ -1,0 +1,8 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA PUBLIC
+CREATE TABLE "PUBLIC"."flyway_schema_history" (\u000a    "installed_rank" INT NOT NULL,\u000a    "version" VARCHAR(50),\u000a    "description" VARCHAR(200) NOT NULL,\u000a    "type" VARCHAR(20) NOT NULL,\u000a    "script" VARCHAR(1000) NOT NULL,\u000a    "checksum" INT,\u000a    "installed_by" VARCHAR(100) NOT NULL,\u000a    "installed_on" TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\u000a    "execution_time" INT NOT NULL,\u000a    "success" BIT NOT NULL\u000a)
+ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+SET SCHEMA "PUBLIC"
