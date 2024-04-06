@@ -1,4 +1,4 @@
-package br.com.camila.barbosa.passin.dto;
+package br.com.camila.barbosa.passin.dto.event;
 
 import br.com.camila.barbosa.passin.domain.events.Event;
 import lombok.Getter;
